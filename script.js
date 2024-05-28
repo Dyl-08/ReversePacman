@@ -43,7 +43,7 @@ let block = false;
 let bounceOffset = 480;
 let bounceSpeed = 0.25;
 
-let s;
+let s = 15;
 let lives = 5;
 
 let lines = [
@@ -167,18 +167,6 @@ function draw() {
     resetgame();
     gameReset = false;
   }
-
-  if (keyCode === 49) {
-    s = 15;
-  }
-
-  if (keyCode === 50) {
-    s = 19;
-  }
-
-  if (keyCode === 51) {
-    s = 22;
-  }
 }
 
 function keyPressed() {
@@ -191,6 +179,18 @@ function keyPressed() {
     for (let drop of drops) {
       drop.collided.fill(false);
     }
+    }
+
+    if (keyCode === 49) {
+      s = 15;
+    }
+  
+    if (keyCode === 50) {
+      s = 19;
+    }
+  
+    if (keyCode === 51) {
+      s = 22;
     }
   } 
 
